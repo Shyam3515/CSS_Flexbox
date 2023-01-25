@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-container1{
+    height:400px;
+    display:flex;
+    flex-direction: column;
+    background: grey;
+    /* Always on main axis(means for row horizontal and for column vertical) */
+    justify-content: start;
+    /* Always on cross axis(reverse of justify-content) */
+    align-items: start;
+    margin:40px;
+}
+.item1{
+    width:100px;
+    height:100px;
+    background-color: steelblue;
+    color:white;
+    font-size: 20px;
+    margin:10px;
+    /* float:left; used without flex for same line */
+    /* Centering a div */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* .item:nth-of-type(1){
+    align-self: start;
+}
+.item:nth-of-type(2){
+    align-self: center;
+}
+.item:nth-of-type(3){
+    align-self: end;
+} */
+
+.flex-container2{
+    display:flex;
+    /* flex-direction: column; */
+    background: grey;
+    /* Always on main axis(means for row horizontal and for column vertical) */
+    justify-content: start;
+    /* Always on cross axis(reverse of justify-content) */
+    align-items: start;
+    margin:40px;
+    flex-wrap: wrap;
+}
+.item2{
+    /* grow shrink basis */
+    /* flex:1 0 0; = flex:1; */
+    flex:1; /* this is flex property*/
+    /* flex-basis: 150px;
+    flex-grow: 1;
+    flex-shrink: 1; */
+    height:100px;
+    background-color: steelblue;
+    color:white;
+    font-size: 20px;
+    margin:10px;
+    /* float:left; used without flex for same line */
+    /* Centering a div */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.item2:nth-of-type(1){
+    order:2;
+    /* flex-shrink: 1; */
+}
+.item2:nth-of-type(2){
+    order:3;
+    /* it cant go smaller than 150px */
+}
+.item2:nth-of-type(3){
+    order:1;
+}
